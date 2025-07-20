@@ -10,7 +10,7 @@ if 'Ваша электронная почта' in requests.get(url).text:
         "demo_mail": f"{email}"
     })
 
-    if 'Ваш код выслан на почту' in response.text:
+    if 'Ваш код был отправлен' in response.text:
         confirm = input('Введите полученную ссылку для подтверждения e-mail адреса: ')
         
         while True:
