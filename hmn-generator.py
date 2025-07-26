@@ -6,11 +6,11 @@ if 'Ваша электронная почта' in requests.get(url).text:
     
     email = input('Введите электронную почту для получения тестового периода: ')
 
-    response = requests.post('https://hidemyname.org/demo/success/', data={
+    response = requests.post('https://hidemyname.org/ru/demo/success/', data={
         "demo_mail": f"{email}"
     })
 
-    if 'Ваш код был выслан' in response.text: # fix text later
+    if 'Ваш код выслан на почту' in response.text:
         confirm = input('Введите полученную ссылку для подтверждения e-mail адреса: ')
         
         while True:
